@@ -1,9 +1,9 @@
 torchrun --nproc_per_node=1 \
     --master_port=34691 \
     train.py \
-    --cfg-path lavis/projects/malmm/qa_msvd.yaml \
+    --cfg-path lavis/projects/malmm/qa_msvd_moe.yaml \
     --options \
-    model.arch blip2_vicuna_instruct \
+    model.arch moe_blip2_vicuna_instruct \
     model.model_type vicuna7b \
     model.load_finetuned False \
     model.load_pretrained True \
